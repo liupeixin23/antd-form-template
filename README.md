@@ -60,7 +60,7 @@ export default {
 
 | 参数 | 说明 | 类型 | required | 默认值 |
 | - | - | - | - | - |
-| tag | Element里的表单项的英文名 | string | true | - |
+| tag | Ant Design Vue 里的表单项的英文名 | string | true | - |
 | value | 绑定值 | string | true | - |
 | label | 表单项的标签 | string | false | - |
 | options | Select或Cascader的选项的列表，详见options | `Array<object>` | false | - |
