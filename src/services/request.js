@@ -14,18 +14,11 @@ const service = axios.create({
 
 service.interceptors.request.use(
   config => {
-    // let token = utilSelf.getStorage('lowCode:token');
-    // const currentAppId = utilSelf.getStorage('currentAppId');
-    // if (token) {
-    //   config.headers.token = token;
-    //   config.headers.appId = currentAppId;
-    // }
 
     //----------------------原有token逻辑 start-----------------------------
     config.headers['token'] = store.state.token;
     config.headers['Authorization'] = `Bearer ${store.state.token}`;
-    // config.headers['tenantId'] = store.state.tenantId;
-    // config.headers['tenantId'] = '6217672e7e07b718ffb54904';
+    config.headers['tenantId'] = store.state.tenantId;
     //----------------------------原有token逻辑 end-------------------------------------
 
     if (config.method == 'GET') {
